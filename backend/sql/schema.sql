@@ -1,0 +1,2 @@
+CREATE TABLE users (id SERIAL PRIMARY KEY,email TEXT UNIQUE,password_hash TEXT);
+CREATE TABLE tasks (id SERIAL PRIMARY KEY,user_id INTEGER REFERENCES users(id),title TEXT,description TEXT,completed BOOLEAN DEFAULT false);
